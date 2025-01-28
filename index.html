@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="popup-screen">
+                <div class="title-screen">ROAD</div>
+                <div class="title-screen">FIGHTER</div>
+                <div class="sound-select">SOUND SELECT</div>
+                <div class="col-sound1">
+                    <img src="cursor.png" class="tangan1" width="20" alt="">
+                    <div class="sound-type">OFF</div>
+                </div>
+                <div class="col-sound2">
+                    <img src="cursor.png" class="tangan2" width="20" alt="">
+                    <div class="sound-type">ON</div>
+                </div>
+                <div class="btn-play">PLAY GAME</div>
+            </div>
+            <div class="popup-pause">
+                <div class="title-screen">GAME PAUSE</div>
+                <div class="btn-restrat-pause" id="btn-restrat-pause" style="margin-top: 50px;"><img src="cursor.png" class="tangan-hover1"
+                        width="20" alt=""> RESTART</div>
+                <div class="btn-resume-pause" id="btn-resume-pause" style="margin-top: 20px;"><img src="cursor.png" class="tangan-hover2"
+                        width="20" alt=""> RESUME</div>
+                <div class="btn-back-pause" id="btn-back-pause" style="margin-top: 20px;"><img src="cursor.png" class="tangan-hover3"
+                        width="20" alt=""> BACK</div>
+
+
+            </div>
+            <div class="popup-gameover">
+                <div class="title-screen">GAME OVER</div>
+                <div class="your-score">YOUR SCORE </div>
+                <div class="score-gameover">00000039</div>
+                <div class="btn-resume-pause" id="btn-playagain" style="margin-top: 20px;"><img src="cursor.png" class="tangan-hover2"
+                        width="20" alt="">
+                    PLAY AGAIN</div>
+                <div class="btn-back-pause" id="btn-back-gameover" style="margin-top: 20px;"><img src="cursor.png" class="tangan-hover3"
+                        width="20" alt="">
+                    BACK</div>
+            </div>
+            <div class="popup-winner">
+                <div class="title-screen">WINNER</div>
+                <div class="your-score">YOUR SCORE </div>
+                <div class="score-winner">0000000</div>
+                <div class="btn-resume-pause" id="btn-playagain-winner" style="margin-top: 20px;"><img src="cursor.png" class="tangan-hover2"
+                        width="20" alt="">
+                    PLAY AGAIN</div>
+                <div class="btn-back-pause" id="btn-back-winner" style="margin-top: 20px;"><img src="cursor.png" class="tangan-hover3"
+                        width="20" alt="">
+                    BACK</div>
+            </div>
+            <div class="box-timer">
+                <div class="col-timer">
+                    <div class="yellowColor"></div>
+                    <div class="green"></div>
+                    <div class="red"></div>
+                </div>
+            </div>
+            <div class="col-line">
+                <div class="line">
+                    <img src="benderaYellow.png" width="20" alt="">
+                    <img src="benderaRed.png" width="20" alt="">
+                    <img src="redCarSmall.png" width="10" class="car" alt="">
+                </div>
+            </div>
+            <div class="col-canvas">
+                <div class="left">
+                    <img src="pohon.png" width="70" style="margin-top: 20px;margin-left: 12px;" alt="">
+                    <img src="pohon.png" width="70" style="margin-top: 20px;margin-left: 12px;" alt="">
+                    <img src="pohon.png" width="70" style="margin-top: 20px;margin-left: 12px;" alt="">
+                    <img src="pohon.png" width="70" style="margin-top: 20px;margin-left: 12px;" alt="">
+                    <img src="pohon.png" width="70" style="margin-top: 20px;margin-left: 12px;" alt="">
+                </div>
+                <canvas></canvas>
+                <div class="right">
+                    <img src="pohon.png" width="70" style="margin-top: 20px;margin-left: 12px;" alt="">
+                    <img src="pohon.png" width="70" style="margin-top: 20px;margin-left: 12px;" alt="">
+                    <img src="pohon.png" width="70" style="margin-top: 20px;margin-left: 12px;" alt="">
+                    <img src="pohon.png" width="70" style="margin-top: 20px;margin-left: 12px;" alt="">
+                    <img src="pohon.png" width="70" style="margin-top: 20px;margin-left: 12px;" alt="">
+                </div>
+            </div>
+            <div class="board">
+                <div class="title-board">ROAD FIGHTER 25'</div>
+                <div class="player1">Player 1</div>
+                <div class="km-col"><span class="km">0</span> Km/h</div>
+                <div class="player1">Score</div>
+                <div class="score">00000000</div>
+                <div class="col-menu">
+                    <div class="title-menu">Menu</div>
+                    <div class="btn-pause">Pause</div>
+                    <div class="btn-restart">Restart</div>
+                    <div class="btn-back">Back</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio src="beep.mp3" class="beb"></audio>
+    <audio src="carCrash.mp3" class="crash"></audio>
+    <audio src="retro-wave-style-track-59892.mp3" loop class="sound"></audio>
+    <audio src="8-bit-video-game-lose-sound-version-1-145828.mp3" class="lose"></audio>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

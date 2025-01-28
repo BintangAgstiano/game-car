@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2p";
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.col-canvas {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-line{
+    width: 100px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    width: 100px !important ;
+    height: 500px !important;
+    background-color: #79AD0D;
+}
+.right{
+    width: 100px;
+    height: 500px;
+    background-color: #79AD0D;
+}
+canvas{
+    background-color: gray;
+}
+.line{
+    width: 30px;
+    background-color: #79AD0D;
+    height: 100%;
+    display: flex;
+align-items: center;
+flex-direction: column;
+position: relative;
+}
+.line img:nth-child(1){
+    position: absolute;
+    top: 12px;
+}
+.line img:nth-child(2){
+    position: absolute;
+    bottom: 12px;
+}
+.line img:nth-child(3){
+    position: absolute;
+            top: 470px;
+    animation: gerak 50s forwards 4s;
+}
+@keyframes gerak{
+    0%{
+        top: 470px;
+    }
+    100%{
+    top: 12px;
+    }
+}
+.board{
+    width: 200px;
+    height: 500px;
+    background-color: black;
+    color: white;
+    position: relative;
+    padding: 10px;
+}
+.col-menu{
+    position: absolute;
+    bottom: 100px;
+    height: 200px;
+
+padding: 20px;    color: black;
+    width: 90%;
+    background-color: white;
+}
+.col-timer{
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    left: 250px;
+    border: 5px solid rgba(57, 57, 57, 0.889);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.yellowColor{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: yellow;
+}
+.green{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: rgb(0, 84, 0);
+}
+.red{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: rgb(100, 0, 0);
+}
+.title-board{
+    color: red;
+    
+}
+.player1{
+    margin-top: 20px;
+}
+.km-col{
+    display: flex;
+    margin-top: 10px;
+}
+.popup-screen{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: 999;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    /* display: none; */
+}
+.title-screen{
+    color: red;
+    font-size: 3rem;
+    text-shadow: 3px 3px  3px rgba(225,  225, 225, 1);
+}
+.sound-select{
+    color: rgba(255, 255, 255, 0.908);
+    margin-top: 30px;
+}
+.col-sound1{
+    display: flex;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.908);
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+}
+.col-sound2{
+    display: flex;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.908);
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+}
+.tangan1{
+    position: absolute;
+rotate: 130deg;
+    left: -40px;
+    /* display: none; */
+}
+.tangan2{
+    position: absolute;
+rotate: 130deg;
+    left: -40px;
+    display: none;
+}
+.btn-play{
+    color: rgba(255, 255, 255, 0.908);
+    margin-top: 20px;
+font-size: 1.2rem;
+cursor: pointer;
+}
+.title-menu{
+    margin-bottom: 40px;
+}
+.btn-pause,.btn-restart,.btn-back{
+    margin-top: 20px;
+    cursor: pointer;
+}
+.popup-pause {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: 999;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    gap: 20px;
+}
+.tangan-hover1 {
+    /* position: absolute; */
+    rotate: 130deg;
+    left: -40px;
+    /* display: none; */
+    opacity: 0;
+}
+.btn-restrat-pause{
+    color: rgba(255, 255, 255, 0.908);
+        margin-top: 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+}
+.btn-restrat-pause:hover .tangan-hover1{
+    opacity: 1;
+}
+.tangan-hover2 {
+    /* position: absolute; */
+    rotate: 130deg;
+    left: -40px;
+    /* display: none; */
+    opacity: 0;
+}
+.btn-resume-pause{
+    color: rgba(255, 255, 255, 0.908);
+        margin-top: 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+}
+.btn-resume-pause:hover .tangan-hover2{
+    opacity: 1;
+}
+.tangan-hover3 {
+    /* position: absolute; */
+    rotate: 130deg;
+    left: -40px;
+    /* display: none; */
+    opacity: 0;
+}
+.btn-back-pause{
+    color: rgba(255, 255, 255, 0.908);
+        margin-top: 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+}
+.btn-back-pause:hover .tangan-hover3{
+    opacity: 1;
+}
+.popup-gameover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: 999;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    gap: 20px;
+}
+.your-score {
+    color: rgba(255, 255, 255, 0.908);
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+.score-gameover {
+    color: rgba(255, 255, 255, 0.908);
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+#btn-back-gameover{
+    margin-left: -30px;
+}
+#btn-back-winner{
+    margin-left: -30px;
+}
+#btn-playagain{
+    margin-left: -30px;
+}
+#btn-playagain-winner{
+    margin-left: -30px;
+}
+.popup-winner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: 999;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    gap: 20px;
+}
+.box-timer{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
+}
